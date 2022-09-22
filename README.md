@@ -1,7 +1,7 @@
 # Twitter_Clone
-This Twitter Clone is a small project using HTML / CSS / JavaScript Using Django FrameWork . I will be using this to showcase my projects!
+This Twitter Clone is a small project using HTML / CSS / JavaScript Using Django Framework. I will be using this to showcase my projects!
 
-[Live Heroku Deployment](/)
+
 
 ## Screenshot:
 
