@@ -16,10 +16,8 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -31,10 +29,12 @@ SECRET_KEY = 'django-insecure-*06yj+&t!*n5ui&%i*nf$$r_+z$pb^gkdf_))5tw2vfsdyh1-!
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-X_FRAME_HOSTS = 'x'
+X_FRAME_OPTIONS = '*'
 CORS_ORIGIN_ALLOW_ALL = True
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/']
-
+CSRF_TRUSTED_ORIGINS = [
+    'http://127.0.0.1:8000/',
+    'https://twitter-clone.piyushpankaj2.repl.co'
+]
 
 # Application definition
 
@@ -82,10 +82,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_forum.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
 
 # DATABASES = {
 #     'default': {
@@ -98,8 +96,6 @@ WSGI_APPLICATION = 'django_forum.wsgi.application'
 #     }
 # }
 
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -107,25 +103,27 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
@@ -138,16 +136,14 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-
-cloudinary.config( 
-  cloud_name = "dn0hlqsgp", 
-  api_key = "994484955312529", 
-  api_secret = "TiDOFzxcVo9qNLA0uDDujFaI5qk",
-  secure= True, 
+cloudinary.config(
+    cloud_name="dn0hlqsgp",
+    api_key="994484955312529",
+    api_secret="TiDOFzxcVo9qNLA0uDDujFaI5qk",
+    secure=True,
 )
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
