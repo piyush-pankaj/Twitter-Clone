@@ -4,7 +4,8 @@ This Twitter Clone is a small project using HTML / CSS / JavaScript Using Django
 [Twitter Clone](https://twitter-clone.piyushpankaj2.repl.co/)
 
 ## Screenshot:
-<img src="img/screenshot.png">
+<img alt="Screenshot" src="static/img/screenshot.png">
+
 
 
 
